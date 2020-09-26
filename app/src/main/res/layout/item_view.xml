@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="220dp"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_for_item">
 
         <TextView
             android:id="@+id/textView4"
@@ -22,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/depart_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -62,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintBottom_toBottomOf="@+id/depart_time"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:srcCompat="@drawable/ic_baseline_train_24" />
@@ -107,8 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:tint="#13619F"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/depart_time"
+            app:layout_constraintTop_toBottomOf="@+id/depart_time"
             app:srcCompat="@drawable/ic_baseline_radio_button_unchecked_24" />
 
         <TextView
@@ -155,11 +158,18 @@
         <androidx.cardview.widget.CardView
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/gradient_for_get_ticket"
             app:layout_constraintBottom_toBottomOf="@+id/textView12"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView12"
-            android:background="@drawable/gradient_for_get_ticket"/>
+            app:cardElevation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_for_get_ticket"></FrameLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
